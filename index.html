@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .active {
+            color: #1D4ED8; 
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        window.addEventListener("scroll", function() {
+            var navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("fixed", "top-0", "left-0", "w-full", "shadow-lg", "bg-white");
+            } else {
+                navbar.classList.remove("fixed", "top-0", "left-0", "w-full", "shadow-lg", "bg-white");
+            }
+
+           
+            var sections = document.querySelectorAll("section");
+            var links = document.querySelectorAll("nav ul li a");
+
+            sections.forEach(function(section, index) {
+                var top = section.offsetTop - 100;
+                var bottom = top + section.offsetHeight;
+                if (window.scrollY >= top && window.scrollY < bottom) {
+                    links.forEach(function(link) {
+                        link.classList.remove("active");
+                    });
+                    links[index].classList.add("active");
+                }
+            });
+        });
+    </script>
+</head>
+<body class="bg-gray-100">
+    <nav id="navbar" class="bg-white shadow-md py-4 px-6 flex justify-between items-center transition-all">
+        <h1 class="text-xl font-bold">Sebastian Trușcanu</h1>
+        <ul class="flex space-x-6">
+            <li><a href="#about" class="hover:underline">About Me</a></li>
+            <li><a href="#resume" class="hover:underline">Resume</a></li>
+            <li><a href="#projects" class="hover:underline">Projects</a></li>
+            <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="about" class="flex items-center justify-center min-h-screen bg-gray-100">
+        <div class="text-center max-w-2xl">
+            <img src="Profile.jpg" alt="Profile" class="w-80 h-80 mx-auto rounded-full border-4 border-gray-500 shadow-lg">
+            <h2 class="text-4xl font-bold mt-4">Sebastian Trușcanu</h2>
+            <p class="text-gray-600 mt-2 text-left text-lg">Third-year student at the Faculty of Electronics,Telecommunications and Information Technology, passionate about hardware and software. <br>Eager to expand my knowledge, develop new skills, and take on newchallenges. Sociable, adaptable, and always open to learning opportunities</p>
+            <div class="mt-6">
+                <a href="#resume" class="bg-blue-600 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out">View Resume</a>
+                <a href="#projects" class="bg-gray-800 text-white py-3 px-8 rounded-lg shadow-lg ml-4 hover:bg-gray-900 transition duration-300 ease-in-out">See Projects</a>
+            </div>
+            <div class="mt-6 flex space-x-4 justify-center">
+                <a href="https://github.com/Gabon033" target="_blank" class="bg-gray-800 text-white hover:text-gray-900 hover:bg-white p-3 rounded-full shadow-lg transition duration-300 ease-in-out">
+                    <i class="fab fa-github text-3xl"></i>
+                </a>
+                <a href="https://www.facebook.com/gabriel.truscanu/" target="_blank" class="bg-blue-600 text-white hover:text-white hover:bg-blue-700 p-3 rounded-full shadow-lg transition duration-300 ease-in-out">
+                    <i class="fab fa-facebook text-3xl"></i>
+                </a>
+                <a href="https://wa.me/0757827408" target="_blank" class="bg-green-500 text-white hover:text-white hover:bg-green-600 p-3 rounded-full shadow-lg transition duration-300 ease-in-out">
+                    <i class="fab fa-whatsapp text-3xl"></i>
+                </a>
+                <a href="mailto:gabi.truscanu@icloud.com" class="bg-blue-600 text-white hover:text-white hover:bg-blue-700 p-3 rounded-full shadow-lg transition duration-300 ease-in-out">
+                    <i class="fas fa-envelope text-3xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="resume" class="min-h-screen p-10 bg-white">
+        <h2 class="text-3xl text-center font-bold border-b pb-2">Resume</h2>
+        <div class="mt-6 grid grid-cols-2 gap-6">
+            <div>
+                <h3 class="text-xl font-bold">Experience</h3>
+                <h3 class="text-xl text-gray-600 ">Work&Travel Program at Aramark South Lake Powell, Page, AZ (06/2024 – 10/2024)</h3>
+                <ul class="mt-2 text-gray-600 list-disc pl-5">
+                    <li>Delivered exceptional customer service by warmly greeting guests, addressing inquiries, and providing prompt assistance.</li>
+                    <li>Ensured high standards of cleanliness and hygiene in resort rooms and common areas</li>
+                </ul>
+                <h3 class="text-xl text-gray-600 ">SALES ASSOCIATE at HAPPY COLOR - Art, hobby & fun (06/2023 – 09/2023)</h3>
+                <ul class="mt-2 text-gray-600 list-disc pl-5">
+                    <li>Ensured a clean, organized, and visually appealing store environment by restocking shelves and strategically arrangingmerchandise displays.</li>
+                    <li> Delivered exceptional customer service by warmly greeting customers, addressing inquiries, and offering personalized assistance with product selection.</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Education</h3>
+                <h3 class="text-xl text-gray-600 ">Faculty of Electronics, Telecommunications and Information Technology, Iași <br>(2022 – CURRENT)</h3>
+                <h3 class="text-xl text-gray-600 "> Department for Teacher Training and Professional Development, Iași <br>(2022 – CURRENT)</h3>
+                <h3 class="text-xl text-gray-600 "> "A. T. Laurian" National College, Botoșani <br>(2018 – 2022)</h3>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Volunteering</h3>
+                <h3 class="text-xl text-gray-600 "> Board Member - "County Foundation for Youth, Botoșani (2021 – 2023)</h3>
+                <h3 class="text-xl text-gray-600 ">County Association Sport for All, Botoșani (2018 – 2022)</h3>
+                <h3 class="text-xl text-gray-600 "> County Association Triumph, Botoșani(2018 – 2022)</h3>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Languages</h3>
+                <h3 class="text-xl text-gray-600 ">Romanian: Native</h3>
+                <h3 class="text-xl text-gray-600 ">English: B2 (Upper Intermediate)</h3>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Soft Skills</h3>
+                <h3 class="text-xl text-gray-600 "> Interpersonal Skills</h3>
+                <ul class="mt-2 text-gray-600 list-disc pl-5">
+                    <li>Strong relationships built with clients and colleagues through clear, respectful, and empathetic communication.</li>
+                    <li>Communication style adapted to suit different audiences, fostering positive and productive interactions.</li>
+                </ul>
+                <h3 class="text-xl text-gray-600 "> Teamwork and Collaboration</h3>
+                <ul class="mt-2 text-gray-600 list-disc pl-5">
+                    <li>Close collaboration with cross-functional teams to achieve project goals and meet deadlines.</li>
+                    <li>Contribution to a positive team environment by encouraging open communication and ensuring all voices are heard.</li>
+                    <li>Balance between individual tasks and team needs, fostering a sense of camaraderie and collective responsibility.</li>
+                </ul>
+                <h3 class="text-xl text-gray-600 ">Problem-Solving</h3>
+                <ul class="mt-2 text-gray-600 list-disc pl-5">
+                    <li>Critical thinking under pressure, delivering innovative solutions that drive success.</li>
+                    <li>Methodical problem-solving approach by gathering relevant data, analyzing options, and considering multiple perspectives before making decisions.</li>
+                </ul>
+                <h3 class="text-xl text-gray-600 ">Adaptability</h3>
+                <ul class="mt-2 text-gray-600 list-disc pl-5">
+                    <li>Thrive in dynamic environments, quickly adapting to new technologies, processes, and work methods.</li>
+                    <li>Openness to feedback, with a willingness to adjust approaches to improve efficiency and outcomes.</li>
+                    <li>High productivity and quality standards maintained when faced with sudden changes or new challenges.</li>
+                </ul>
+                <h3 class="text-xl text-gray-600 ">Attention to Detail</h3>
+                <ul class="mt-2 text-gray-600 list-disc pl-5">
+                    <li>Consistently delivering work with a high level of accuracy, ensuring every detail meets the required standards.</li>
+                    <li>Careful review of documents, reports, and presentations for errors, ensuring flawless submissions.</li>
+                </ul>
+                <h3 class="text-xl text-gray-600 ">Time Management</h3>
+                <ul class="mt-2 text-gray-600 list-disc pl-5">
+                    <li>Skilled in prioritizing tasks based on urgency and importance to meet deadlines without compromising quality. Able to identify key objectives and focus on high-impact activities.</li>
+                    <li>Experienced in setting both short-term and long-term goals, breaking them down into manageable steps, and systematically tracking progress to ensure timely completion.</li>
+                    <li>Communicates deadlines and expectations clearly with colleagues and stakeholders, ensuring alignment and avoiding misunderstandings.</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold">Technical Skills</h3>
+                <h3 class="text-xl text-gray-600 ">Programming Languages</h3>
+                <ul class="mt-2 text-gray-600 list-disc pl-5">
+                    <li>C: Proficient in using C for system-level programming, with experience in memory management, data structures, and algorithms.</li>
+                    <li>C++: Proficient in C++ for developing high-performance, system-level applications with a focus on memory management, object-oriented programming (OOP), and optimizing code for speed and efficiency.</li>
+                    <li>C#: Experience in developing desktop applications, web applications, and game development using C# with .NET framework, focusing on object-oriented design, LINQ, and asynchronous programming.</li>
+                </ul>
+                <h3 class="text-xl text-gray-600 ">Web Development</h3>
+                <ul class="mt-2 text-gray-600 list-disc pl-5">
+                    <li>HTML: Expertise in creating structured and semantically correct web pages using HTML5, ensuring accessibility and SEO best practices.</li>
+                    <li>CSS: Proficient in designing responsive and visually appealing web pages with CSS3.</li>
+                    <li>JavaScript: Skilled in JavaScript for developing interactive and dynamic web applications.</li>
+                    <li>WordPress: Experienced in building and managing websites using WordPress.</li>
+                </ul>
+                <h3 class="text-xl text-gray-600 ">Engineering and Design Tools</h3>
+                <ul class="mt-2 text-gray-600 list-disc pl-5">
+                    <li>AutoCAD: Proficient in creating 2D and 3D technical drawings, blueprints, and layouts for engineering projects.</li>
+                    <li>OrCAD: Knowledgeable in designing circuit boards, creating schematics, and working with simulations in electronic design automation (EDA).</li>
+                    <li>PSpice: Familiar with using PSpice for analog and digital circuit simulation, performing analysis to ensure circuit functionality.</li>
+                    <li>MATLAB: Proficient in using MATLAB for data analysis, numerical computation, algorithm development, and visualization.</li>
+                </ul>
+                <h3 class="text-xl text-gray-600 ">Embedded Systems:</h3>
+                <ul class="mt-2 text-gray-600 list-disc pl-5">
+                    <li>Arduino: Proficient in programming Arduino boards for various hardware projects, including sensor integration, motor control, and automation systems.</li>
+                </ul>
+                <h3 class="text-xl text-gray-600 ">Design and Multimedia Tools:</h3>
+                <ul class="mt-2 text-gray-600 list-disc pl-5">
+                    <li>Adobe Illustrator: Proficient in vector graphic design, logo creation, and working with illustrations and typography.</li>
+                    <li>Adobe Premiere Pro: Experience in video editing, including cutting, color correction, audio editing, and incorporating transitions and special effects to create polished videos.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="min-h-screen p-10 bg-gray-100">
+        <h2 class="text-3xl text-center font-bold border-b pb-2">Projects</h2>
+        <div class="mt-6 grid grid-cols-3 gap-6">
+            <div class="project-card">
+                <h3 class="text-xl font-semibold">FarmGame C#</h3>
+                <p class="text-gray-600 mt-2">A family-friendly slots game where the objective is to match two or three animals of the same type. Players spin the virtual slots, and if they align with the same animal, they win a sum of in-game currency. The game is designed to be engaging and simple, providing a fun experience with a theme centered around farm animals, making it suitable for all ages. Through this project, I demonstrated skills in game logic, user interface design, and event-driven programming in C#.</p>
+            </div>
+            <div class="project-card">
+                <h3 class="text-xl font-semibold">Automated Parking System – Arduino Project</h3>
+                <p class="text-gray-600 mt-2">Developed an automated parking system using an Arduino Due, ultrasonic sensors, servo motors, LEDs, an LCD display, and a traffic light system. The project simulates a smart parking lot with an automated lift mechanism for parking cars. Ultrasonic sensors detect available parking spaces, while servo motors control barriers to allow or block entry. The traffic light system manages the flow of vehicles, ensuring safe and efficient movement. An LCD display shows the number of available spaces, providing real-time information to users. This project showcases skills in integrating hardware components, programming for automation, and problem-solving in an embedded systems environment.</p>
+            </div>
+            <div class="project-card">
+                <h3 class="text-xl font-semibold">Square Wave Signal Generator – Arduino Project</h3>
+                <p class="text-gray-600 mt-2">Created a Square Wave Signal Generator using an Arduino platform to generate adjustable square wave signals for various applications. The project allows users to modify the frequency and duty cycle of the signal through an easy-to-use interface. Pulse Width Modulation (PWM) was utilized to control the output signal, providing precise and customizable square wave outputs. This project demonstrates a strong understanding of signal generation, microcontroller programming, and electronics, showcasing my ability to work with both hardware and software to create functional and adaptable systems.</p>
+            </div>
+            <div class="project-card">
+                <h3 class="text-xl font-semibold">Example Website Set for Digital Skills Certification – HTML, CSS, JavaScript Project</h3>
+                <p class="text-gray-600 mt-2">Developed a set of example websites using HTML, CSS, and JavaScript to assist 12th-grade students in preparing for their Digital Skills Certification exams. These websites offer interactive examples, guides, and resources aimed at helping students understand key concepts and complete their digital competency projects. The project focuses on providing clear and practical examples of HTML, CSS, and JavaScript usage, helping students practice and apply their knowledge in real-world scenarios. This project demonstrates my ability to create educational web tools that are both functional and engaging for students.</p>
+            </div>
+            <div class="project-card">
+                <h3 class="text-xl font-semibold">Arduino Beginner Tutorials – Arduino Project</h3>
+                <p class="text-gray-600 mt-2">Created a series of beginner-friendly tutorials for learning Arduino, designed to guide users through basic projects and fundamental concepts. The tutorials include simple scenarios such as controlling LEDs, operating servo motors, and other basic hardware interactions. Each tutorial was structured to provide step-by-step instructions, helping users to understand the core principles of embedded systems and electronics. This project highlights my ability to break down complex topics into easy-to-understand lessons, fostering a hands-on approach to learning and encouraging experimentation with Arduino.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="min-h-screen p-10 bg-white">
+        <h2 class="text-3xl text-center font-bold border-b pb-2">Contact</h2>
+        <form class="mt-6 max-w-xl mx-auto" action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+            <div class="mb-4">
+                <label class="block text-gray-700">Name</label>
+                <input type="text" name="name" class="w-full p-3 border border-gray-400 rounded-lg shadow-sm focus:ring focus:ring-blue-300">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Email</label>
+                <input type="email" name="email" class="w-full p-3 border border-gray-400 rounded-lg shadow-sm focus:ring focus:ring-blue-300">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Message</label>
+                <textarea name="message" class="w-full p-3 border border-gray-400 rounded-lg shadow-sm focus:ring focus:ring-blue-300" rows="4"></textarea>
+            </div>
+            <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700">Send Message</button>
+        </form>
+    </section>
+    
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <p>Contact: gabi.truscanu@icloud.com | Phone: +(40) 757827408</p>
+        <p>&copy; 2025 Sebastian Trușcanu. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
